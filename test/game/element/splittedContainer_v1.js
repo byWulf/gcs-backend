@@ -73,6 +73,24 @@ describe('game', function() {
                     });
                 });
 
+                it('must not allow more than 100 rows', function() {
+                    let rows = [];
+                    for (let i = 0; i < 101; i++) {
+                        rows.push(1/101);
+                    }
+                    assert.throws(function() {
+                        sc.setRows(rows);
+                    });
+                    
+                    rows = [];
+                    for (let i = 0; i < 100; i++) {
+                        rows.push(1/100);
+                    }
+                    assert.doesNotThrow(function() {
+                        sc.setRows(rows);
+                    });
+                });
+
                 it('must be correct with three elements', function() {
                     assert.doesNotThrow(function() {
                         sc.setRows([0.5, 0.2, 0.3]);
@@ -145,6 +163,24 @@ describe('game', function() {
                 it('must be in sum exactly 1 (too hight)', function() {
                     assert.throws(function() {
                         sc.setColumns([0.1, 0.2, 0.3, 0.4, 0.5]);
+                    });
+                });
+
+                it('must not allow more than 100 columns', function() {
+                    let columns = [];
+                    for (let i = 0; i < 101; i++) {
+                        columns.push(1/101);
+                    }
+                    assert.throws(function() {
+                        sc.setColumns(columns);
+                    });
+                    
+                    columns = [];
+                    for (let i = 0; i < 100; i++) {
+                        columns.push(1/100);
+                    }
+                    assert.doesNotThrow(function() {
+                        sc.setColumns(columns);
                     });
                 });
 
