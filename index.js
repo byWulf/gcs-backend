@@ -1,11 +1,17 @@
-var FrontendCommunicator = require('./lib/frontendCommunicator');
-var frontendCommunicator = new FrontendCommunicator(3701);
+'use strict';
 
-var chatService = require('./lib/service/chat');
+const FrontendCommunicator = require('./lib/frontendCommunicator');
+let frontendCommunicator = new FrontendCommunicator(3701);
+
+const GameCommunicator = require('./lib/frontendCommunicator');
+let gameCommunicator = new FrontendCommunicator(3701);
+
+const chatService = require('./lib/service/chat');
 chatService.registerEvents(frontendCommunicator.eventEmitter);
 
-var gameService = require('./lib/service/game');
-gameService.registerEvents(frontendCommunicator.eventEmitter);
+const gameService = require('./lib/service/game');
+gameService.registerFrontendEvents(frontendCommunicator.eventEmitter);
+gameService.registerGameEvents(gameCommunicator.eventEmitter);
 
-var newsService = require('./lib/service/news');
+const newsService = require('./lib/service/news');
 newsService.registerEvents(frontendCommunicator.eventEmitter);
