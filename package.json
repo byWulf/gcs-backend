@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha \"test/**/*.js\" --reporter spec"
+    "test": "./node_modules/.bin/mocha \"test/**/*.js\" --reporter spec",
+    "start": "node index"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   "homepage": "https://github.com/byWulf/gcs-backend#readme",
   "dependencies": {
     "chai": "^3.5.0",
-    "mocha": "^3.2.0"
+    "mocha": "^3.2.0",
+    "socket.io": "^1.7.3"
   }
 }
