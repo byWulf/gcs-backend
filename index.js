@@ -11,11 +11,12 @@ let gameCommunicator = new GameCommunicator(3702);
 
 const gameService = require('./lib/service/game.service');
 gameService.registerFrontendEvents(frontendCommunicator.eventEmitter);
+gameService.registerGame('gcs-game-sandbox');
 
 const userService = require('./lib/service/user.service');
 userService.registerEvents(frontendCommunicator.eventEmitter);
 
 const matchService = require('./lib/service/match.service');
 matchService.registerFrontendEvents(frontendCommunicator.eventEmitter);
-matchService.registerGameEvents(gameCommunicator.eventEmitter);
+matchService.registerGameEvents(gameCommunicator.eventEmitter, gameCommunicator.sendCommand);
 matchService.registerUserEvents(userService.eventEmitter);
