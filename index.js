@@ -3,7 +3,8 @@
 const FrontendCommunicator = require('./lib/frontendCommunicator');
 let frontendCommunicator = new FrontendCommunicator({
     tcp: 3701,
-    websocket: 3700
+    websocket: 3700,
+    cdn: 3699
 });
 
 const GameCommunicator = require('./lib/gameCommunicator');
