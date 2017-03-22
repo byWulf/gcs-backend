@@ -20,7 +20,7 @@
   "dependencies": {
     "chai": "^3.5.0",
     "express": "^4.15.2",
-    "gcs-game-sandbox": "file:../gcs-game-sandbox",
+    "gcs-game-sandbox": "bywulf/gcs-game-sandbox",
     "mocha": "^3.2.0",
     "socket.io": "^1.7.3"
   }
