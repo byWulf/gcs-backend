@@ -20,9 +20,9 @@
   "dependencies": {
     "chai": "^3.5.0",
     "express": "^4.15.2",
-    "gcs-game-menschaergeredichnicht": "github:bywulf/gcs-game-menschaergeredichnicht",
-    "gcs-game-schlangenundleitern": "github:bywulf/gcs-game-schlangenundleitern",
-    "gcs-game-sandbox": "bywulf/gcs-game-sandbox",
+    "gcs-game-menschaergeredichnicht": "file:../gcs-game-menschaergeredichnicht",
+    "gcs-game-schlangenundleitern": "file:../gcs-game-schlangenundleitern",
+    "gcs-game-sandbox": "file:../gcs-game-sandbox",
     "mocha": "^3.2.0",
     "socket.io": "^1.7.3"
   }
