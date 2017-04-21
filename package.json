@@ -18,12 +18,16 @@
   },
   "homepage": "https://github.com/byWulf/gcs-backend#readme",
   "dependencies": {
+    "bcrypt": "^1.0.2",
     "chai": "^3.5.0",
+    "crypto": "0.0.3",
     "express": "^4.15.2",
+    "gcs-game-carcassonne": "file:../gcs-game-carcassonne",
     "gcs-game-menschaergeredichnicht": "file:../gcs-game-menschaergeredichnicht",
-    "gcs-game-schlangenundleitern": "file:../gcs-game-schlangenundleitern",
     "gcs-game-sandbox": "file:../gcs-game-sandbox",
+    "gcs-game-schlangenundleitern": "file:../gcs-game-schlangenundleitern",
     "mocha": "^3.2.0",
+    "sleep": "^5.1.1",
     "socket.io": "^1.7.3"
   }
 }

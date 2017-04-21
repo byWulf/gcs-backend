@@ -15,6 +15,7 @@ gameService.registerFrontendEvents(frontendCommunicator.eventEmitter);
 gameService.registerGame('gcs-game-sandbox');
 gameService.registerGame('gcs-game-menschaergeredichnicht');
 gameService.registerGame('gcs-game-schlangenundleitern');
+gameService.registerGame('gcs-game-carcassonne');
 
 const userService = require('./lib/service/user.service');
 userService.registerEvents(frontendCommunicator.eventEmitter);
