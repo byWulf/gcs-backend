@@ -1,5 +1,7 @@
 'use strict';
 
+const databaseCommunicator = require('./lib/databaseCommunicator');
+
 const FrontendCommunicator = require('./lib/frontendCommunicator');
 let frontendCommunicator = new FrontendCommunicator({
     tcp: 3701,
@@ -23,4 +25,12 @@ userService.registerEvents(frontendCommunicator.eventEmitter);
 const matchService = require('./lib/service/match.service');
 matchService.registerFrontendEvents(frontendCommunicator.eventEmitter);
 matchService.registerGameEvents(gameCommunicator.eventEmitter, gameCommunicator.sendCommand);
-matchService.registerUserEvents(userService.eventEmitter);
+
+module.exports = {
+    databaseCommunicator: databaseCommunicator,
+    frontendCommunicator: frontendCommunicator,
+    gameCommunicator: gameCommunicator,
+    gameService: gameService,
+    userService: userService,
+    matchService: matchService
+};
