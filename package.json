@@ -21,7 +21,7 @@
     "bcryptjs": "^2.4.3",
     "chai": "^3.5.0",
     "crypto": "0.0.3",
-    "express": "^4.15.2",
+    "express": "^4.22.1",
     "gcs-game-carcassonne": "bywulf/gcs-game-carcassonne",
     "gcs-game-menschaergeredichnicht": "bywulf/gcs-game-menschaergeredichnicht",
     "gcs-game-sandbox": "bywulf/gcs-game-sandbox",
